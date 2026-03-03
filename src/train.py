@@ -10,9 +10,9 @@ import matplotlib.pyplot as plt
 data = pd.read_csv('https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv')
 
 # Preprocessing
-data['Age'].fillna(data['Age'].median(), inplace=True)  # Fill missing ages
-data['Embarked'].fillna('S', inplace=True)             # Fill missing embarked
-data['Sex'] = data['Sex'].map({'male':0, 'female':1})  # Encode Sex
+data['Age'] = data['Age'].fillna(data['Age'].median())
+data['Embarked'] = data['Embarked'].fillna('S')
+data['Sex'] = data['Sex'].map({'male':0, 'female':1})
 data = pd.get_dummies(data, columns=['Embarked'], drop_first=True)
 
 # Select features
