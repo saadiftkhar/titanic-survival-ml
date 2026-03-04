@@ -1,54 +1,103 @@
-# \# Titanic Survival Prediction - ML Pipeline
+# 🚢 Titanic Survival Prediction - ML Pipeline
 
-# 
+## 📌 Project Overview
+This project implements a complete end-to-end Machine Learning pipeline to predict passenger survival on the Titanic dataset. It demonstrates structured data preprocessing, feature engineering, model training, hyperparameter tuning, and evaluation using industry-standard best practices.
 
-# \## Project Overview
+The objective is to build a reproducible and production-style ML workflow rather than just training a simple classification model.
 
-# This project predicts passenger survival on the Titanic dataset using a full machine learning pipeline with preprocessing, feature engineering, hyperparameter tuning, and model evaluation.
+---
 
-# 
+## 🧠 Problem Statement
+Given passenger information such as age, gender, ticket class, and family details, predict whether a passenger survived the Titanic disaster.
 
-# \## Features
+This is a binary classification problem:
+- 0 → Did Not Survive  
+- 1 → Survived  
 
-# \- Feature engineering (FamilySize)
+---
 
-# \- Preprocessing with ColumnTransformer
+## ⚙️ Machine Learning Pipeline
 
-# \- Stratified train-test split
+### 🔹 Data Preprocessing
+- Handling missing values  
+- Encoding categorical variables  
+- Feature scaling  
+- ColumnTransformer for structured preprocessing  
 
-# \- 5-fold Stratified Cross Validation
+### 🔹 Feature Engineering
+- Created **FamilySize** feature using:
+  - SibSp (siblings/spouses)
+  - Parch (parents/children)
 
-# \- Hyperparameter tuning with GridSearchCV
+### 🔹 Model Training
+- Stratified Train-Test Split  
+- 5-Fold Stratified Cross Validation  
+- Hyperparameter tuning using GridSearchCV  
+- Best model selection  
 
-# \- Evaluation metrics (Accuracy, F1, Confusion Matrix)
+---
 
-# \- Feature importance analysis
+## 📊 Model Performance
 
-# \- Model persistence using joblib
+- Final Test Accuracy: **0.82 (82%)**
+- Cross-Validation Accuracy: ~0.80 – 0.83
+- Stable generalization performance
+- All test cases executed successfully
 
-# 
+Example Output:
 
-# \## How to Run
+Test Accuracy: 0.82  
 
-# 
+Confusion Matrix:  
+[[90 15]  
+ [18 56]]  
 
-# Install dependencies:
+All preprocessing tests passed!
 
-# 
+<img width="640" height="480" alt="Figure_1" src="https://github.com/user-attachments/assets/96831e84-d4f1-4c2e-ab93-00baf5823210" />
 
-# pip install -r requirements.txt
 
-# 
+---
 
-# Run training:
+## ▶️ How to Run the Project
 
-# 
+### 1️⃣ Clone the Repository
+git clone https://github.com/saadiftkhar/titanic-survival-ml.git  
+cd titanic-survival-ml  
 
-# python src/train.py
+### 2️⃣ Install Dependencies
+pip install -r requirements.txt  
 
-# 
+### 3️⃣ Run Training Script
+python src/train.py  
 
-# \## Output
+The script will:
+- Train the model  
+- Perform cross-validation  
+- Evaluate on test data  
+- Print performance metrics 
 
-# \- Trained model saved in: models/best\_titanic\_model.pkl
+---
 
+## 🛠️ Tech Stack
+- Python  
+- Pandas  
+- NumPy  
+- Scikit-learn  
+- Joblib
+- Matplotlib
+- Seaborn 
+
+---
+
+## 🎯 Key Learning Outcomes
+- Building production-style ML pipelines  
+- Structured preprocessing using ColumnTransformer  
+- Hyperparameter tuning with GridSearchCV  
+- Avoiding data leakage  
+- Writing reproducible ML code  
+
+---
+
+## 👨‍💻 Author
+Saad Iftikhar
