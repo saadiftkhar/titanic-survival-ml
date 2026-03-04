@@ -52,8 +52,6 @@ Confusion Matrix:
 [[90 15]  
  [18 56]]  
 
-All preprocessing tests passed!
-
 <img width="640" height="480" alt="Figure_1" src="https://github.com/user-attachments/assets/96831e84-d4f1-4c2e-ab93-00baf5823210" />
 
 
@@ -79,6 +77,15 @@ The script will:
 
 ---
 
+### 3️⃣ Run Test Cases
+python tests/preprocessing_test.py
+
+The script will:
+- Run all test cases    
+- Print "All preprocessing tests passed!"
+
+---
+  
 ## 🛠️ Tech Stack
 - Python  
 - Pandas  
